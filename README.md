@@ -1,5 +1,7 @@
 # Rails with Vue test app
 
+## CHAPTER ONE
+
 This is a repo runing alongside the blog posts available at [Plymouth Software](www.plymouthsoftware.com)
 
 To run locally...
