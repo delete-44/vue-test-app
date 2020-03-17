@@ -1,9 +1,14 @@
-// app/javascript/packs/films-list.js
 import Vue from 'vue'
-import List from '../films-list.vue'
+import BootstrapVue from 'bootstrap-vue'
+import Table from '../films-table.vue'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+
+Vue.use(BootstrapVue)
+
 document.addEventListener('DOMContentLoaded', () => {
   new Vue({
-    el: '#filmList',
-    render: h => h(List),
-  });
+    el: '#filmTable',
+    render: h => h(Table),
+  })
 });
