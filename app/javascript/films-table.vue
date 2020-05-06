@@ -16,7 +16,8 @@
 </template>
 
 <script>
-  import axios from 'axios-on-rails'
+  import axios from 'axios'
+  import { setCSRFToken } from './packs/csrf-token.js'
 
   export default {
     data() {
@@ -26,6 +27,8 @@
       };
     },
     created () {
+      setCSRFToken(axios, document)
+
       axios
       .get('/films.json')
       .then(response => (this.items = response.data))
