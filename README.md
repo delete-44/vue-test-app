@@ -1,6 +1,6 @@
 # Rails with Vue test app
 
-## CHAPTER THREE
+## CHAPTER FOUR
 
 This is a repo runing alongside the blog posts available at [Plymouth Software](www.plymouthsoftware.com)
 
