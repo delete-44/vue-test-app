@@ -11,7 +11,7 @@ class FilmsController < ApplicationController
     else
       render json: {
         error: @film.errors.full_messages.first
-      }, status: :forbidden
+      }, status: :unprocessable_entity
     end
   end
 
