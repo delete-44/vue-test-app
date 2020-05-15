@@ -6,7 +6,13 @@ class FilmsController < ApplicationController
   end
 
   def update
-    @film.update(film_params)
+    if @film.update(film_params)
+      head :ok
+    else
+      render json: {
+        error: @film.errors.full_messages.first
+      }, status: :unprocessable_entity
+    end
   end
 
   private

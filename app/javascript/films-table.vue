@@ -46,6 +46,15 @@
               description: row.children[2].children[0]._value
             }
           })
+          .then(function(response) {
+            row.classList.remove('danger')
+          })
+          .catch(function(response) {
+            row.classList.add('danger')
+
+            let message = response.response.data.error
+            alert(message)
+          })
       },
     }
   }
@@ -54,4 +63,5 @@
 
 <style scoped>
   body { padding: 1rem; }
+  .danger input { border-color: red !important; }
 </style>
